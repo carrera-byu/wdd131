@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131: Fundamentos da Web Dinâmica - Victor Carrera</title>
+    <meta name="description"
+        content="WDD 131 - Fundamentos da Web Dinâmica - Página inicial de Victor Carrera, estudante de Análise e Desenvolvimento de Software da BYU">
+    <meta name="author" content="Victor Carrera">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/base.css">
+    <script src="scripts/obterdatas.js" defer></script>
 </head>
 
 <body>
-    <h1>Victor Carrera</h1>
+    <header>
+        <span id="course-title">WDD 131: Fundamentos da Web Dinâmica - Victor Carrera</span>
+        <nav>
+            <a href="https://www.linkedin.com">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7">Escritura</a>
+            <a href="#">Projeto Final</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Victor Carrera</h1>
+        <section class="card">
+            <h2>Sobre Mim</h2>
+            <div class="sobre">
+                <p>Meu nome é Victor Carrera, sou estudante da BYU no curso de Análise e Desenvolvimento de Software.
+                    Sou apaixonado por tecnologia e estou aprendendo os fundamentos da web dinâmica na disciplina WDD
+                    131.</p>
+                <img src="imagens/perfil.jpg" alt="Foto de Victor Carrera" width="150">
+            </div>
 
-    <p>Software Developer</p>
+            <h3>Brasil</h3>
+            <div class="pais">
+                <figure>
+                    <img src="imagens/venezuela.jpg" alt="Bandeira da Venezuela" width="150">
+                    <figcaption>Bandeira da Venezuela</figcaption>
+                </figure>
+                <p>Venezuela é um país localizado no norte da América do Sul.</p>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Recursos Web</h2>
+            <ul>
+                <li><a href="https://dev.to">Dev.to Community</a></li>
+                <li><a href="https://www.w3schools.com">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="anoatual"></span> Victor Carrera - Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
 </body>
 
 </html>
