@@ -1,0 +1,37 @@
+/* CSS Base - Atividade S02 - Design Responsivo */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilo comum para estrutura */
+header,
+main,
+footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #999;
+    padding: 1.2rem;
+    background-color: #c9d6ff;
+    /* azul diferente para ser único */
+    border-radius: 4px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+section {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-left: 4px solid #333;
+}
