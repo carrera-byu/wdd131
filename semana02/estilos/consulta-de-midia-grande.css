@@ -1,8 +1,7 @@
-/* Consulta de mídia para telas maiores */
 @media screen and (min-width: 500px) {
     header {
-        background-color: #000000;
-        color: #ffffff;
+        background-color: black;
+        color: white;
     }
 
     main {
