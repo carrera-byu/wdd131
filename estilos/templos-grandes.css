@@ -1,24 +1,20 @@
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
     #menu {
         display: none;
     }
 
-    .navigation {
-        display: flex !important;
+    nav {
         flex-direction: row;
-        position: static;
-        width: auto;
-        gap: 1rem;
+        justify-content: space-around;
+        background-color: #4b0082;
     }
 
     .container {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
-    .container figure {
-        max-width: 280px;
-        /* aún más pequeño en PC */
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
