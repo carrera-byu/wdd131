@@ -1,14 +1,12 @@
-const currentYear = document.querySelector("#currentyear");
-const lastModif = document.querySelector("#lastModified");
+// Atualiza ano e última modificação
+document.getElementById("ano").textContent = new Date().getFullYear();
+document.getElementById("modificacao").textContent = document.lastModified;
 
-const today = new Date();
-currentYear.textContent = today.getFullYear();
-lastModif.textContent = `Ultima Modificação: ${document.lastModified}`;
+// Menu hambúrguer
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
 
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
-
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hamButton.classList.toggle('open');
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("ativo");
+    toggle.textContent = menu.classList.contains("ativo") ? "✖" : "☰";
 });

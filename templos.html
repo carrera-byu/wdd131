@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Álbum do Templo</title>
-    <meta name="description" content="Álbum de Templos SUD - WDD 131">
-    <meta name="author" content="Victor Carrera">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/templos.css">
-    <link rel="stylesheet" href="estilos/templos-grandes.css">
-    <script src="scripts/templos.js" defer></script>
+    <link rel="stylesheet" href="estilos/templos-grandes.css" media="screen and (min-width: 768px)">
 </head>
 
 <body>
     <header>
         <h1>Álbum do Templo</h1>
-        <button id="menu">☰</button>
-        <nav class="navigation">
+        <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+        <nav id="menu">
             <a href="#">Página Inicial</a>
             <a href="#">Antigo</a>
             <a href="#">Novo</a>
@@ -26,51 +24,46 @@
     </header>
 
     <main>
-        <h2>Templos</h2>
-        <div class="container">
-            <figure>
-                <img src="imagens/templo-1.jpg" alt="Templo 1">
+        <h2>Galeria de Templos</h2>
+        <section class="galeria">
+            <figure><img src="imagens/templo-1.jpg" alt="Templo 1" loading="lazy">
                 <figcaption>Templo 1</figcaption>
             </figure>
-            <figure>
-                <img src="imagens/templo-2.jpg" alt="Templo 2">
+            <figure><img src="imagens/templo-2.jpg" alt="Templo 2" loading="lazy">
                 <figcaption>Templo 2</figcaption>
             </figure>
-            <figure>
-                <img src="imagens/templo-3.jpg" alt="Templo 3">
+            <figure><img src="imagens/templo-3.jpg" alt="Templo 3" loading="lazy">
                 <figcaption>Templo 3</figcaption>
             </figure>
-            <figure>
-                <img src="imagens/templo-4.jpg" alt="Templo 4">
+            <figure><img src="imagens/templo-4.jpg" alt="Templo 4" loading="lazy">
                 <figcaption>Templo 4</figcaption>
             </figure>
-            <figure>
-                <img src="imagens/templo-5.jpg" alt="Templo 5">
+            <figure><img src="imagens/templo-5.jpg" alt="Templo 5" loading="lazy">
                 <figcaption>Templo 5</figcaption>
             </figure>
-            <figure>
-                <img src="imagens/templo-6.jpg" alt="Templo 6">
+            <figure><img src="imagens/templo-6.jpg" alt="Templo 6" loading="lazy">
                 <figcaption>Templo 6</figcaption>
             </figure>
-            <figure>
-                <img src="imagens/templo-7.jpg" alt="Templo 7">
+            <figure><img src="imagens/templo-7.jpg" alt="Templo 7" loading="lazy">
                 <figcaption>Templo 7</figcaption>
             </figure>
-            <figure>
-                <img src="imagens/templo-8.jpg" alt="Templo 8">
+            <figure><img src="imagens/templo-8.jpg" alt="Templo 8" loading="lazy">
                 <figcaption>Templo 8</figcaption>
             </figure>
-            <figure>
-                <img src="imagens/templo-9.jpg" alt="Templo 9">
+            <figure><img src="imagens/templo-9.jpg" alt="Templo 9" loading="lazy">
                 <figcaption>Templo 9</figcaption>
             </figure>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <p>©<span id="currentyear"></span> 🌍 Victor Carrera 🌍- São Paulo </p>
-        <p id="lastModified"></p>
+        <p>
+            ©<span id="ano"></span> 🌍 Victor Carrera 🌍 <br>
+            Ultima Modificação: <span id="modificacao"></span>
+        </p>
     </footer>
+
+    <script src="scripts/templos.js" defer></script>
 </body>
 
 </html>
