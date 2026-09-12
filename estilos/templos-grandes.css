@@ -1,20 +1,25 @@
-#menu-toggle {
-    display: none;
-}
+@media screen and (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
 
-nav {
-    display: flex !important;
-    flex-direction: row;
-    gap: 0.5rem;
-    width: auto;
-    background: transparent;
-    margin-top: 0;
-}
+    header {
+        background: #4a115c;
+    }
 
-nav.ativo {
-    flex-direction: row;
-}
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        width: auto;
+        background: transparent;
+        margin-top: 0;
+    }
 
-.galeria {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .galeria {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    main {
+        max-width: 1200px;
+    }
 }
