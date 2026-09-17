@@ -1,79 +1,63 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: #f0f0f0;
+    background: #f0f0f0
 }
 
 header {
     background: #0a0f2c;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 1.5rem;
-}
-
-header h1 {
-    margin: 0;
+    padding: 1.5rem
 }
 
 .content {
-    display: block;
-    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem
 }
 
 .hero {
     position: relative;
-    background: white;
-    padding: 0.5rem;
+    background: #fff
 }
 
 .hero img {
     width: 100%;
-    height: auto;
-    display: block;
-    border: 8px solid #4a90d9;
+    height: 500px;
+    object-fit: cover;
+    display: block
 }
 
 .card {
-    background: white;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+    overflow: hidden
 }
 
 .card h2 {
     background: #ffcc00;
-    padding: 0.8rem;
-    margin: 0;
+    padding: .8rem;
+    margin: 0
 }
 
 .card p {
-    padding: 0.8rem 1.2rem;
-    border-bottom: 1px solid #eee;
+    padding: .6rem 1rem;
+    border-bottom: 1px solid #eee
 }
 
-.card-dados {
-    margin-bottom: 1rem;
-}
-
-/* DESKTOP igual a foto */
-@media (min-width: 900px) {
+@media(min-width:900px) {
     .content {
         display: grid;
-        grid-template-columns: 1fr 300px;
-        gap: 2rem;
-        align-items: start;
-    }
-
-    .hero {
-        position: relative;
+        grid-template-columns: 1fr 320px;
+        gap: 1.5rem;
+        align-items: start
     }
 
     .card-dados {
@@ -81,18 +65,28 @@ header h1 {
         top: 20px;
         left: 20px;
         width: 280px;
-        z-index: 2;
+        z-index: 2
     }
 
     .card-clima {
-        margin-top: 150px;
+        margin-top: 60px
+    }
+}
+
+@media(max-width:899px) {
+    .hero img {
+        height: 300px
+    }
+
+    .card-dados {
+        margin: 1rem 0
     }
 }
 
 footer {
     background: #0a0f2c;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
+    margin-top: 2rem
 }
