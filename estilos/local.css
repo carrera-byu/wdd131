@@ -1,0 +1,116 @@
+:root {
+    --verde: #006400;
+    --amarelo: #ffdf00;
+    --azul: #002776;
+    --branco: #ffffff;
+    --cinza-claro: #f4f4f4;
+    --cinza-borda: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6
+}
+
+header {
+    background: var(--verde);
+    color: var(--branco);
+    text-align: center;
+    padding: 1.5rem
+}
+
+header h1 {
+    letter-spacing: 1px
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block
+}
+
+.card {
+    background: var(--cinza-claro);
+    border: 1px solid var(--cinza-borda);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px
+}
+
+.card h2 {
+    background: var(--amarelo);
+    color: #333;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+
+.card ul {
+    list-style: none;
+    margin-top: .5rem
+}
+
+.card li {
+    padding: .4rem 0;
+    border-bottom: 1px solid #ddd
+}
+
+footer {
+    background: var(--verde);
+    color: var(--branco);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem
+}
+
+/* Mobile: esconde o img, vamos usar pseudo-elemento no desktop */
+.clima h2 img {
+    display: inline-block
+}
+
+@media(min-width:1000px) {
+    main {
+        position: relative
+    }
+
+    .hero img {
+        height: 600px;
+        object-fit: cover
+    }
+
+    .dados {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 320px;
+        background: rgba(255, 255, 255, .92);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .2)
+    }
+
+    .clima {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        width: 320px;
+        background: rgba(255, 255, 255, .92);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .2)
+    }
+
+    /* Requisito: pseudoelemento para ícone do clima após o título */
+    .clima h2 img {
+        display: none
+    }
+
+    .clima h2::after {
+        content: "⛅";
+        margin-left: .5rem;
+        font-size: 1.8rem;
+    }
+}
