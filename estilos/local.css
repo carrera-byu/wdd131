@@ -9,60 +9,59 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--gris);
     color: #333;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 header {
     background: var(--azul);
     color: #fff;
     text-align: center;
-    padding: 1.2rem
+    padding: 1.2rem;
 }
 
 header h1 {
-    font-size: 1.8rem
+    font-size: 1.8rem;
 }
 
+/* Emoticon: SOLO en pantalla amplia */
 header h1::after {
-    content: " 🇧🇷";
-    font-size: 1.4rem
+    content: "";
 }
 
 .content {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0;
-    background: #fff
+    background: #fff;
 }
 
 .hero {
-    position: relative
+    position: relative;
 }
 
 .hero picture,
 .hero img {
     display: block;
-    width: 100%
+    width: 100%;
 }
 
 .hero img {
     height: 520px;
     object-fit: cover;
-    border-bottom: 4px solid var(--amarillo)
+    border-bottom: 4px solid var(--amarillo);
 }
 
 .card {
     background: #fff;
     box-shadow: var(--sombra);
     border-radius: var(--radio);
-    overflow: hidden
+    overflow: hidden;
 }
 
 .card h2 {
@@ -72,26 +71,17 @@ header h1::after {
     font-size: 1.2rem;
     display: flex;
     align-items: center;
-    gap: .5rem
-}
-
-.card h2::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background: rgba(0, 0, 0, .15);
-    flex: 1;
-    margin-left: .5rem
+    gap: .5rem;
 }
 
 .card p {
     padding: .55rem 1rem;
     border-bottom: 1px solid #eee;
-    font-size: .95rem
+    font-size: .95rem;
 }
 
 .card p:last-child {
-    border-bottom: none
+    border-bottom: none;
 }
 
 .card-dados {
@@ -99,15 +89,20 @@ header h1::after {
     top: 25px;
     left: 25px;
     width: 300px;
-    z-index: 10
+    z-index: 10;
 }
 
 .card-clima {
     position: absolute;
-    bottom: 40px;
+    bottom: 25px;
     right: 25px;
-    width: 230px;
-    z-index: 10
+    width: 260px;
+    z-index: 10;
+}
+
+/* SVG: oculto en desktop por defecto */
+.card-clima h2 svg {
+    display: none;
 }
 
 footer {
@@ -115,32 +110,38 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
-    font-size: .9rem
+    font-size: .9rem;
 }
 
 footer p {
-    margin: .2rem 0
+    margin: .2rem 0;
 }
 
-@media(max-width:899px) {
+/* Vista amplia: emoticon */
+@media (min-width: 900px) {
+    header h1::after {
+        content: " 🌎";
+        font-size: 1.4rem;
+    }
+}
+
+/* Vista móvil */
+@media (max-width: 899px) {
     .hero img {
-        height: 320px
+        height: 320px;
     }
 
-    .content {
-        display: block
-    }
-
-    .card-dados {
-        position: static;
-        width: auto;
-        margin: 0;
-        border-radius: 0
-    }
-
+    .card-dados,
     .card-clima {
         position: static;
         width: auto;
-        margin: 1rem
+        margin: 1rem;
+        border-radius: var(--radio);
+    }
+
+    /* SVG: visible SOLO en móvil */
+    .card-clima h2 svg {
+        display: inline-block;
+        vertical-align: middle;
     }
 }
