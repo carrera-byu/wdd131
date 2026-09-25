@@ -8,7 +8,7 @@
     }
 
     nav {
-        display: flex !important;
+        display: flex;
         flex-direction: row;
         width: auto;
         background: transparent;
