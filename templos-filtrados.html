@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum do Templo - Filtrado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/templos-filtrados.css">
+    <link rel="stylesheet" href="estilos/templos-filtrados-grandes.css" media="screen and (min-width: 768px)">
+</head>
+
+<body>
+    <header>
+        <h1>Álbum do Templo</h1>
+        <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+        <nav id="menu">
+            <a href="#" id="home">Página Inicial</a>
+            <a href="#" id="old">Antigo</a>
+            <a href="#" id="new">Novo</a>
+            <a href="#" id="large">Grande</a>
+            <a href="#" id="small">Pequeno</a>
+        </nav>
+    </header>
+    <main>
+        <h2 id="titulo-filtro">Home</h2>
+        <section class="galeria" id="templos-container"></section>
+    </main>
+    <footer>
+        <p>©<span id="ano"></span> 🌍 Victor Carrera Navarro 🌍 <br>Ultima Modificação: <span id="modificacao"></span>
+        </p>
+    </footer>
+    <script src="scripts/templos-filtrados.js" defer></script>
+</body>
+
+</html>
