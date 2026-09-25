@@ -19,6 +19,7 @@ const temples = [
 
 ];
 
+
 const container = document.getElementById("templos-container");
 const titulo = document.getElementById("titulo-filtro");
 
