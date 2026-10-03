@@ -1,0 +1,65 @@
+< !DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Avaliação de Produto</title>
+        <link rel="stylesheet" href="styles/formulario.css">
+        <script src="scripts/formulario.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Avaliação de Produto</h1>
+        </header>
+        <main>
+            <form method="get" action="avaliacao.html" class="form-avaliacao">
+
+                <label for="produto">Nome do Produto *</label>
+                <select id="produto" name="produto" required>
+                    <option value="" disabled selected>Selecione um Produto...</option>
+                </select>
+                <h2 style="text-align:center; color:#1D3557;">Nos ajude a melhorar nossos produtos</h2>
+
+                <fieldset>
+                    <legend>Classificação Geral *</legend>
+                    <div class="estrelas">
+                        <label><input type="radio" id="estrela1" name="avaliacao" value="1" required> ☆</label>
+                        <label><input type="radio" id="estrela2" name="avaliacao" value="2" required> ☆☆</label>
+                        <label><input type="radio" id="estrela3" name="avaliacao" value="3" required> ☆☆☆</label>
+                        <label><input type="radio" id="estrela4" name="avaliacao" value="4" required> ☆☆☆☆</label>
+                        <label><input type="radio" id="estrela5" name="avaliacao" value="5" required> ☆☆☆☆☆</label>
+                    </div>
+                </fieldset>
+
+                <label for="dataInstalacao">Data de Instalação *</label>
+                <input type="date" id="dataInstalacao" name="dataInstalacao" required>
+
+                <fieldset>
+                    <legend>Recursos Úteis (marque todos que se aplicam)</legend>
+                    <label><input type="checkbox" id="recurso1" name="recursos" value="durabilidade">
+                        Durabilidade</label>
+                    <label><input type="checkbox" id="recurso2" name="recursos" value="facilidade"> Facilidade de
+                        Uso</label>
+                    <label><input type="checkbox" id="recurso3" name="recursos" value="desempenho"> Desempenho</label>
+                    <label><input type="checkbox" id="recurso4" name="recursos" value="design"> Design</label>
+                </fieldset>
+
+                <label for="avaliacaoTexto">Avaliação Escrita</label>
+                <textarea id="avaliacaoTexto" name="avaliacaoTexto" rows="5"
+                    placeholder="Escreva sua experiência..."></textarea>
+
+                <label for="nomeUsuario">Nome de Usuário</label>
+                <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Seu nome (opcional)">
+
+                <input type="submit" value="Enviar Avaliação" class="btn-enviar">
+            </form>
+        </main>
+        <footer>
+            <p>&copy; <span id="ano"></span> | Victor Carrera | WDD 131</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+
+    </html>

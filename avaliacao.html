@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Enviada</title>
+    <link rel="stylesheet" href="styles/formulario.css">
+</head>
+
+<body>
+    <header>
+        <h1>Obrigado pela Avaliação!</h1>
+    </header>
+    <main class="confirmacao">
+        <h2>✅ Avaliação recebida com sucesso</h2>
+        <p>Sua avaliação foi registrada.</p>
+        <p>Total de avaliações que você já enviou: <strong id="contador">0</strong></p>
+        <a href="formulario.html" class="btn-enviar"
+            style="display:inline-block; text-decoration:none; text-align:center; margin-top:20px;">Nova Avaliação</a>
+    </main>
+    <footer>
+        <p>&copy; <span id="ano"></span> | Victor Carrera | WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        // Contador localStorage
+        let total = Number(localStorage.getItem("avaliacoes")) || 0;
+        total++;
+        localStorage.setItem("avaliacoes", total);
+        document.getElementById("contador").textContent = total;
+
+        // Footer
+        document.getElementById("ano").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Última modificação: " + document.lastModified;
+    </script>
+</body>
+
+</html>
