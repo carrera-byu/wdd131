@@ -8,17 +8,20 @@ const produtos = [
 
 document.addEventListener("DOMContentLoaded", () => {
     const select = document.getElementById("produto");
-    produtos.forEach(prod => {
-        const option = document.createElement("option");
-        option.value = prod.id;
-        option.textContent = prod.name;
-        select.appendChild(option);
-    });
-
-
-    // footer
+    if (select) {
+        produtos.forEach((prod) => {
+            const option = document.createElement("option");
+            option.value = prod.id;
+            option.textContent = prod.name;
+            select.appendChild(option);
+        });
+    }
     const ano = document.getElementById("ano");
-    if (ano) ano.textContent = new Date().getFullYear();
+    if (ano) {
+        ano.textContent = new Date().getFullYear();
+    }
     const mod = document.getElementById("lastModified");
-    if (mod) mod.textContent = "Última modificação: " + document.lastModified;
+    if (mod) {
+        mod.textContent = "Ultima modificacao: " + document.lastModified;
+    }
 });

@@ -4,36 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação Enviada</title>
-    <link rel="stylesheet" href="styles/formulario.css">
+    <title>Revisão de Produto - Confirmação</title>
+    <meta name="description"
+        content="Pagina de confirmacao de avaliacao de produto enviada com contador de avaliacoes.">
+    <meta name="author" content="Victor Carrera">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos/formulario.css">
 </head>
-
 
 <body>
     <header>
-        <h1>Obrigado pela Avaliação!</h1>
+        <h1>Avaliação Enviada</h1>
     </header>
     <main class="confirmacao">
-        <h2>✅ Avaliação recebida com sucesso</h2>
-        <p>Sua avaliação foi registrada.</p>
-        <p>Total de avaliações que você já enviou: <strong id="contador">0</strong></p>
-        <a href="formulario.html" class="btn-enviar"
-            style="display:inline-block; text-decoration:none; text-align:center; margin-top:20px;">Nova Avaliação</a>
+        <h2>Obrigado pela sua avaliação!</h2>
+        <p>Sua avaliação foi registrada com sucesso.</p>
+        <p>Total de avaliações enviadas: <span id="contador">0</span></p>
+        <a href="formulario.html">Enviar outra avaliação</a>
     </main>
     <footer>
         <p>&copy; <span id="ano"></span> | Victor Carrera | WDD 131</p>
         <p id="lastModified"></p>
     </footer>
     <script>
-        // Contador localStorage
         let total = Number(localStorage.getItem("avaliacoes")) || 0;
         total++;
         localStorage.setItem("avaliacoes", total);
         document.getElementById("contador").textContent = total;
-
-        // Footer
         document.getElementById("ano").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = "Última modificação: " + document.lastModified;
+        document.getElementById("lastModified").textContent = "Ultima modificacao: " + document.lastModified;
     </script>
 </body>
 
