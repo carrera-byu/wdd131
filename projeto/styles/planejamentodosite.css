@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap');
+
+:root {
+  --cor-principal: #1D3557;
+  --cor-secundaria: #457B9D;
+  --cor-destaque: #A8DADC;
+  --cor-fundo: #F1FAEE;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--cor-fundo);
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--cor-principal);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+h1,
+h2 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--cor-principal);
+}
+
+header h1,
+header h2 {
+  color: white;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  border-left: 5px solid var(--cor-secundaria);
+}
+
+.cores {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cor {
+  width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background: var(--cor-principal);
+  color: white;
+  border-radius: 10px;
+}
