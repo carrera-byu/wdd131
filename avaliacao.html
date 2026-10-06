@@ -4,38 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revisão de Produto - Confirmação</title>
-    <meta name="description"
-        content="Pagina de confirmacao de avaliacao de produto enviada com contador de avaliacoes.">
-    <meta name="author" content="Victor Carrera">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap"
-        rel="stylesheet">
+    <title>Avaliação Enviada</title>
     <link rel="stylesheet" href="estilos/formulario.css">
 </head>
 
 <body>
     <header>
-        <h1>Avaliação Enviada</h1>
+        <h1>Revisão de Produto</h1>
     </header>
-    <main class="confirmacao">
+    <main>
         <h2>Obrigado pela sua avaliação!</h2>
-        <p>Sua avaliação foi registrada com sucesso.</p>
-        <p>Total de avaliações enviadas: <span id="contador">0</span></p>
-        <a href="formulario.html">Enviar outra avaliação</a>
+        <p>Sua avaliação foi enviada com sucesso.</p>
+        <p>Total de avaliações enviadas: <span id="contador"></span></p>
+        <a href="formulario.html">Voltar ao formulário</a>
     </main>
     <footer>
-        <p>&copy; <span id="ano"></span> | Victor Carrera | WDD 131</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="currentyear"></span> Victor Carrera</p>
     </footer>
     <script>
-        let total = Number(localStorage.getItem("avaliacoes")) || 0;
-        total++;
-        localStorage.setItem("avaliacoes", total);
-        document.getElementById("contador").textContent = total;
-        document.getElementById("ano").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = "Ultima modificacao: " + document.lastModified;
+        let count = Number(localStorage.getItem("avaliacoes")) || 0;
+        count++;
+        localStorage.setItem("avaliacoes", count);
+        document.getElementById("contador").textContent = count;
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
     </script>
 </body>
 
