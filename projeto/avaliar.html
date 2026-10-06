@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar - GameLog</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>GameLog</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="avaliar.html">Avaliar</a>
+            <a href="referencias.html">Referências</a>
+        </nav>
+    </header>
+
+    <main style="padding:2rem; max-width:600px; margin:auto;">
+        <h2>Avaliar um Jogo</h2>
+        <p>Sua avaliação ficará salva no seu navegador usando localStorage</p>
+
+        <form id="formulario-avaliacao" style="margin-top:20px; background:#1e1e1e; padding:20px; border-radius:10px;">
+            <label for="nome-jogo">Nome do Jogo:</label><br>
+            <input type="text" id="nome-jogo" required style="width:100%; padding:10px; margin:10px 0;"><br>
+
+            <label for="nota-jogo">Sua Nota (0 a 10):</label><br>
+            <input type="number" id="nota-jogo" min="0" max="10" step="0.1" required
+                style="width:100%; padding:10px; margin:10px 0;"><br>
+
+            <label for="comentario">Seu Comentário:</label><br>
+            <textarea id="comentario" rows="4" style="width:100%; padding:10px; margin:10px 0;"></textarea><br>
+
+            <button type="submit" class="botao-avaliar">Salvar Avaliação</button>
+        </form>
+
+        <div id="lista-avaliacoes" style="margin-top:30px;"></div>
+    </main>
+
+    <script>
+        // Lógica específica da página de avaliação
+        const formulario = document.getElementById('formulario-avaliacao');
+        const lista = document.getElementById('lista-avaliacoes');
+
+        function mostrarAvaliacoes() {
+            const avaliacoesSalvas = JSON.parse(localStorage.getItem('avaliacoesGameLog')) || [];
+            lista.innerHTML = '<h3>Minhas Avaliações Salvas:</h3>';
+            avaliacoesSalvas.forEach(av => {
+                lista.innerHTML += `<div style="background:#1e1e1e; padding:15px; margin:10px 0; border-left:4px solid #00ff88;">
+          <strong>${av.nome}</strong> - Nota: ${av.nota}/10<br>
+          <em>${av.comentario}</em>
+        </div>`;
+            });
+        }
+
+        formulario.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const novaAvaliacao = {
+                nome: document.getElementById('nome-jogo').value,
+                nota: document.getElementById('nota-jogo').value,
+                comentario: document.getElementById('comentario').value
+            };
+
+            let avaliacoes = JSON.parse(localStorage.getItem('avaliacoesGameLog')) || [];
+            avaliacoes.push(novaAvaliacao);
+            localStorage.setItem('avaliacoesGameLog', JSON.stringify(avaliacoes));
+
+            alert('Avaliação salva com sucesso!');
+            formulario.reset();
+            mostrarAvaliacoes();
+        });
+
+        document.addEventListener('DOMContentLoaded', mostrarAvaliacoes);
+    </script>
+</body>
+
+</html>

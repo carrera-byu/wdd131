@@ -1,0 +1,260 @@
+/* ===== CONFIGURAÇÕES GERAIS - GAMELOG ===== */
+:root {
+    --cor-fundo: #121212;
+    --cor-card: #1e1e1e;
+    --cor-primaria: #00ff88;
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #b3b3b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-card);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+header nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: var(--cor-primaria);
+}
+
+/* Grade de jogos */
+.catalogo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card-jogo {
+    background: var(--cor-card);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card-jogo:hover {
+    transform: scale(1.05);
+}
+
+.card-jogo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 1rem;
+}
+
+.botao-avaliar {
+    background-color: var(--cor-primaria);
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ===== CORREÇÃO CATÁLOGO - IMAGENS CENTRALIZADAS ===== */
+#catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-jogo {
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-jogo:hover {
+    transform: translateY(-5px);
+}
+
+.card-imagem {
+    width: 100%;
+    height: 300px;
+    background: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    display: block;
+}
+
+.card-conteudo {
+    padding: 15px;
+    text-align: left;
+    color: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-conteudo h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+}
+
+.card-conteudo p {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+.botao-avaliar {
+    margin-top: 10px;
+    background: #00d9a5;
+    color: #000;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-avaliar:hover {
+    background: #00ff88;
+}
+
+/* ===== HEADER E HAMBURGUER ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #0f172a;
+    border-bottom: 2px solid #00ff88;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburguer {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVO CELULAR ===== */
+@media (max-width: 768px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 20px !important;
+    }
+
+    .nav {
+        position: absolute;
+        top: 55px;
+        right: 0;
+        background: #0f172a;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        display: none;
+        border-left: 2px solid #00ff88;
+        border-bottom: 2px solid #00ff88;
+        border-radius: 0 0 0 10px;
+    }
+
+    .nav.ativo {
+        display: flex;
+    }
+
+    main section h1 {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+        word-wrap: break-word;
+        padding: 0 10px;
+    }
+
+    main section p {
+        font-size: 14px !important;
+        padding: 0 15px;
+    }
+
+    #filtros {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    #catalogo {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 10px !important;
+    }
+
+    .card-imagem {
+        height: 200px !important;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - GameLog</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>GameLog</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="avaliar.html">Avaliar</a>
+            <a href="referencias.html">Referências</a>
+        </nav>
+    </header>
+
+    <main style="padding:2rem;">
+        <h2>Meu Catálogo Completo</h2>
+        <p>Filtre por gênero para encontrar seus favoritos</p>
+
+        <div style="margin: 20px 0;">
+            <button class="botao-avaliar" style="width:auto;" onclick="filtrarPorGenero('todos')">Todos</button>
+            <button class="botao-avaliar" style="width:auto;" onclick="filtrarPorGenero('rpg')">RPG</button>
+            <button class="botao-avaliar" style="width:auto;" onclick="filtrarPorGenero('esporte')">Esporte</button>
+            <button class="botao-avaliar" style="width:auto;" onclick="filtrarPorGenero('aventura')">Aventura</button>
+            <button class="botao-avaliar" style="width:auto;" onclick="filtrarPorGenero('corrida')">Corrida</button>
+        </div>
+
+        <div id="catalogo" class="catalogo-container"></div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

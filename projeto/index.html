@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLog</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">GameLog</div>
+        <button class="hamburguer" id="hamburguer">☰</button>
+        <nav class="nav" id="nav">
+            <a href="index.html">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="avaliar.html">Avaliar</a>
+            <a href="referencias.html">Referências</a>
+        </nav>
+    </header>
+
+    <main>
+        <section style="text-align:center; padding:40px 20px;">
+            <h1>Bem-vindo ao meu universo gamer</h1>
+            <p>Este site foi criado para organizar, avaliar e compartilhar os melhores jogos que já joguei. Aqui você
+                encontra meu catálogo pessoal com filtros dinâmicos.</p>
+            <br>
+            <a href="#catalogo"
+                style="background:#00d9a5; padding:10px 20px; border-radius:6px; color:#000; text-decoration:none; font-weight:bold;">Ver
+                Catálogo</a>
+        </section>
+
+        <div id="filtros" style="text-align:center; padding:20px;">
+            <button onclick="filtrarPorGenero('todos')">Todos</button>
+            <button onclick="filtrarPorGenero('rpg')">RPG</button>
+            <button onclick="filtrarPorGenero('esporte')">Esporte</button>
+            <button onclick="filtrarPorGenero('aventura')">Aventura</button>
+            <button onclick="filtrarPorGenero('corrida')">Corrida</button>
+        </div>
+
+        <div id="catalogo"></div>
+    </main>
+
+    <footer style="text-align:center; padding:2rem; margin-top:2rem; background:#1e1e1e;">
+        <p>&copy; 2026 - Projeto WDD131 - Desenvolvido por Victor Carrera </p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
