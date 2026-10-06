@@ -6,7 +6,6 @@ const produtos = [
     { id: "warp", nome: "Warp Equalizer" }
 ];
 
-
 const select = document.querySelector("#produto");
 produtos.forEach(p => {
     const opt = document.createElement("option");
