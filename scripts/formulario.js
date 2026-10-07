@@ -7,6 +7,7 @@ const products = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+    // 1. Llena el select
     const select = document.getElementById("produto");
     if (select) {
         products.forEach(product => {
@@ -16,8 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
             select.appendChild(option);
         });
     }
+
+    // 2. Año actual - UNA SOLA VEZ
     const yearSpan = document.getElementById("currentyear");
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // 3. Última modificación - DENTRO del DOMContentLoaded
+    const lastModSpan = document.getElementById("lastModified");
+    if (lastModSpan) {
+        const lastMod = new Date(document.lastModified);
+        const formatted = lastMod.toLocaleString("pt-BR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        });
+        lastModSpan.textContent = `Última Modificação: ${formatted}`;
     }
 });
