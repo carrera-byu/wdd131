@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+
     // 2. Año actual - UNA SOLA VEZ
     const yearSpan = document.getElementById("currentyear");
     if (yearSpan) {

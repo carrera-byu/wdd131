@@ -22,37 +22,58 @@
     </header>
     <main>
         <form method="get" action="avaliacao.html">
-            <label for="produto">Nome do Produto *</label>
+            <label for="produto">Nome do Produto</label>
             <select id="produto" name="produto" required>
-                <option value="" disabled selected>Selecione um Produto...</option>
+                <option value="" disabled selected>Selecione um Produto ...</option>
             </select>
 
             <fieldset>
-                <legend>Classificação Geral *</legend>
-                <label><input type="radio" id="estrela1" name="avaliacao" value="1" required> ☆ 1</label>
-                <label><input type="radio" id="estrela2" name="avaliacao" value="2" required> ☆☆ 2</label>
-                <label><input type="radio" id="estrela3" name="avaliacao" value="3" required> ☆☆☆ 3</label>
-                <label><input type="radio" id="estrela4" name="avaliacao" value="4" required> ☆☆☆☆ 4</label>
-                <label><input type="radio" id="estrela5" name="avaliacao" value="5" required> ☆☆☆☆☆ 5</label>
+                <legend>Avaliação Geral</legend>
+                <div class="estrelas">
+                    <input type="radio" id="estrela1" name="avaliacao" value="1" required>
+                    <label for="estrela1">☆ 1</label>
+
+                    <input type="radio" id="estrela2" name="avaliacao" value="2" required>
+                    <label for="estrela2">☆ 2</label>
+
+                    <input type="radio" id="estrela3" name="avaliacao" value="3" required>
+                    <label for="estrela3">☆ 3</label>
+
+                    <input type="radio" id="estrela4" name="avaliacao" value="4" required>
+                    <label for="estrela4">☆ 4</label>
+
+                    <input type="radio" id="estrela5" name="avaliacao" value="5" required>
+                    <label for="estrela5">☆ 5</label>
+                </div>
             </fieldset>
 
-            <label for="dataInstalacao">Data de Instalação *</label>
+            <label for="dataInstalacao">Data de Instalação</label>
             <input type="date" id="dataInstalacao" name="dataInstalacao" required>
 
             <fieldset>
                 <legend>Recursos Úteis (marque todos que se aplicam)</legend>
-                <label><input type="checkbox" id="recurso1" name="durabilidade" value="durabilidade">
-                    Durabilidade</label>
-                <label><input type="checkbox" id="recurso2" name="facilidade" value="facilidade"> Facilidade de
-                    uso</label>
-                <label><input type="checkbox" id="recurso3" name="desempenho" value="desempenho"> Desempenho</label>
-                <label><input type="checkbox" id="recurso4" name="design" value="design"> Design</label>
+                <div>
+                    <input type="checkbox" id="recurso1" name="durabilidade" value="durabilidade">
+                    <label for="recurso1">Durabilidade</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="recurso2" name="facilidade" value="facilidade">
+                    <label for="recurso2">Facilidade de Uso</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="recurso3" name="desempenho" value="desempenho">
+                    <label for="recurso3">Desempenho</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="recurso4" name="design" value="design">
+                    <label for="recurso4">Design</label>
+                </div>
             </fieldset>
 
-            <label for="avaliacaoTexto">Avaliação Escrita</label>
-            <textarea id="avaliacaoTexto" name="avaliacaoTexto" rows="4"></textarea>
+            <label for="comentario">Revisão Escrita</label>
+            <textarea id="comentario" name="comentario" rows="4"></textarea>
 
-            <label for="nomeUsuario">Nome de Usuário</label>
+            <label for="nomeUsuario">Seu Nome (Opcional)</label>
             <input type="text" id="nomeUsuario" name="nomeUsuario">
 
             <input type="submit" value="Enviar Avaliação">
@@ -62,5 +83,6 @@
         <p>&copy; <span id="currentyear"></span> Victor Carrera | WDD131 - São Paulo</p>
         <p id="lastModified"></p>
     </footer>
+</body>
 
 </html>
